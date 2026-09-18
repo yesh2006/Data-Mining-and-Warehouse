@@ -1,0 +1,14 @@
+# Exam data / local state
+raw/
+staging/parquet/
+sales.zip
+truth.json
+*.env
+.env
+__pycache__/
+*.pyc
+*.duckdb
+*.db
+
+# Local-only script with lab credentials, if retained
+scripts/load_sales_local.py
