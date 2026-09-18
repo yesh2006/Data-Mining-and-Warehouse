@@ -1,0 +1,15 @@
+SECTION A — B: MINHASH PROOF
+
+Accuracy requirement used for engineering selection:
+MAE <= 0.03 on the trusted labelled_pairs.csv experiment.
+
+Measured:
+- 32 permutations: MAE 0.0504
+- 64 permutations: MAE 0.0336
+- 128 permutations: MAE 0.0285
+
+Selection:
+128 permutations is the smallest tested signature size whose measured MAE is below 0.03.
+The choice is therefore tied to an explicit accuracy requirement rather than a round-number convention.
+
+The 128-permutation configuration is then used by the LSH stage.

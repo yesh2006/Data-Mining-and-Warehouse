@@ -1,0 +1,12 @@
+REQUIRED PAIR SCORE EVIDENCE
+
+N010018 vs N010020 (SAME)
+- Word-3 Jaccard: 0.2217
+- Character-5 Jaccard: 0.3049
+
+N007876 vs N008565 (DIFFERENT)
+- Word-3 Jaccard: 0.1872
+- Character-5 Jaccard: 0.3864
+
+For these required examples, the character representation gives the DIFFERENT pair a higher
+score than the SAME pair, while Word-3 preserves the correct ordering.

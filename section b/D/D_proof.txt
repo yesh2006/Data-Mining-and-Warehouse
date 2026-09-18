@@ -1,0 +1,23 @@
+SECTION B — D: DATABASE PROOF
+
+Relational structures created:
+- notices
+- opportunities
+- notice_opportunity
+- lsh_buckets
+
+Access path:
+- B-tree index on (band, bucket_hash): idx_lsh_bucket_lookup
+
+Measured indexed query:
+- Plan: Index Scan using idx_lsh_bucket_lookup
+- Execution time: 0.046 ms
+
+Forced comparison:
+- Plan: Seq Scan on lsh_buckets
+- Rows removed by filter: 12,000
+- Execution time: 0.779 ms
+
+Measured indexed execution / sequential execution ≈ 16.9x faster.
+The opportunity_id in the relational mapping provides a persistent identifier for an opportunity,
+so notice copies can point to the same opportunity without using the transient process state.

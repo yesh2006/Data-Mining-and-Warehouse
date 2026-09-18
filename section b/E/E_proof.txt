@@ -1,0 +1,34 @@
+SECTION B — E: HOTSPOT / MITIGATION PROOF
+
+Full-corpus candidate-work result at LSH threshold 0.4:
+- 12,000 notices
+- mean candidates: 1614.613167
+- median candidates: 1492
+- maximum candidates: 4563
+- candidate work before cap: 19,375,358
+
+After candidate-list cap of 25:
+- candidate work: 299,573
+- reduction: 98.45%
+
+Highest displayed portal totals:
+- P094: 2,371,761
+- P002: 1,862,809
+- P005: 1,809,968
+- P001: 1,798,895
+- P006: 1,404,391
+- P003: 1,366,487
+- P004: 1,332,246
+
+Interpretation:
+The candidate distribution is highly skewed. A small number of notices generate thousands of
+candidates, creating disproportionate downstream work. This is consistent with the portal notes
+about nodal aggregators carrying repeated boilerplate; those portals also account for 4,665 notices
+and have longer average bodies than other portals.
+
+Mitigation:
+A hard cap of 25 candidates bounds pathological work. The measured candidate-work reduction is
+98.45%.
+
+The supplied run did not print an E wall-clock timestamp before and after the cap. No fabricated
+runtime number is included here.

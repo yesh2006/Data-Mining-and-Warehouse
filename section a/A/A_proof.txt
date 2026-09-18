@@ -1,0 +1,24 @@
+SECTION A — A: SIMILARITY PROOF
+
+Corpus facts:
+- 12,000 notices
+- 260 portals
+- 900 trusted labelled pairs: 279 SAME, 621 DIFFERENT
+
+Required labelled examples:
+- SAME: N010018 vs N010020
+- DIFFERENT: N007876 vs N008565
+
+Measured aggregate similarity:
+- Word-3: DIFFERENT mean 0.253793; SAME mean 0.644673; separation 0.3909
+- Character-5: DIFFERENT mean 0.430489; SAME mean 0.708862; separation 0.2784
+
+Decision:
+Word-3 shingles are adopted for the main similarity representation because the measured
+SAME-vs-DIFFERENT mean separation is larger in the 900-pair experiment.
+
+Signal/noise evidence from the corpus:
+- The SAME example is a corrigendum with different portal/reference/date values but the same work,
+  showing that identifiers and dates should not dominate text similarity.
+- The DIFFERENT example contains generic procurement boilerplate on a nodal portal while describing
+  a different opportunity, showing that repeated boilerplate is not useful discriminative signal.

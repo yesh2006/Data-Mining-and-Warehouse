@@ -1,0 +1,25 @@
+SECTION A — C: LSH PROOF
+
+Measured SAME-pair recall on the trusted labelled sample:
+- threshold 0.4: 82.08%
+- threshold 0.5: 69.89%
+- threshold 0.6: 48.39%
+- threshold 0.7: 38.71%
+
+Operating point used:
+- MinHash permutations: 128
+- LSH bands: 32
+- LSH rows: 4
+- threshold: 0.4
+
+Risk model used for operating-point reasoning:
+- false merge cost = 100
+- missed-duplicate cost = 1
+
+This 100:1 ratio is an engineering cost assumption used to make the stated asymmetry numeric.
+It places more weight on preserving true duplicates at the candidate stage; final duplicate
+decisions remain a separate exact-similarity step.
+
+The survival curve plot is theoretical for the observed (bands=32, rows=4) LSH configuration:
+P(survive) = 1 - (1 - s^r)^b.
+The measured 82.08% SAME-pair recall at threshold 0.4 is shown separately.

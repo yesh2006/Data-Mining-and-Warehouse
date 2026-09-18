@@ -1,0 +1,3 @@
+Method,Plan,Execution time (ms)
+Indexed,Index Scan using idx_lsh_bucket_lookup,0.046
+Sequential,Seq Scan on lsh_buckets,0.779
